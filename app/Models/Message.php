@@ -5,14 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Category extends Model
+class Message extends Model
 {
     use HasFactory;
     protected $fillable=[
-            'name',
-            'slug',
+        'name',
+        'email',
+        'content',
     ];
-    public function Teams(){
-        return $this->belongsToMany(Team::class);
-    }
 }
